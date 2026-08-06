@@ -29,5 +29,9 @@ claude plugin marketplace add RunLit/project-distiller
 claude plugin install project-distiller@project-distiller
 ```
 
-On first enable, you'll be asked where to save your notes (defaults to `~/project-distill`).
+Then set where notes get saved (defaults to `~/project-distill`):
+
+```bash
+/plugin configure project-distiller@project-distiller
+```
 
