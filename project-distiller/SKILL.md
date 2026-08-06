@@ -50,10 +50,17 @@ Watch for these signal shapes during normal project work, not just when asked:
 - Something surprising about a tool/library/API/hardware behavior just got discovered → **Gotcha**
 - A design decision or approach just got settled on after weighing options, and the reasoning generalizes → **Knowledge**
 - A "wait, that means I could also..." or "huh, interesting, what if..." moment appears in the conversation → **Spark**
+- A prior decision just got reversed, narrowed, or scoped back down (e.g. "actually don't extend the fix that far") → **Knowledge**
 
-When one of these fires, **offer, don't auto-write**: a short one-line offer like "Worth a gotcha entry — that env var default was the actual culprit. Log it?" Wait for confirmation before writing.
+**Mandatory checkpoint — do not skip this by getting absorbed in execution.** Right before every reply that follows a completed piece of substantive work (a bug fixed, a decision settled, a tool-use sequence finished), run this check silently: *"Does anything in what just happened match one of the signal shapes above?"* This check happens even when the task felt purely mechanical (an edit, a revert, a verification run) — non-obvious traps and scope decisions often surface exactly there, not in the discussion around them. Do the check before writing the response, not after — if you're already mid-reply and only then notice a match, that's the checkpoint firing late, not a reason to skip it.
 
-Don't fire on routine work — only on moments that would genuinely be useful to reread later. If in doubt, lean toward not interrupting; better to miss one than to nag.
+If a real task is mid-flight (multi-step implementation, active debugging), it's fine to finish the current step first — but run the checkpoint at that step's natural end, not "whenever I remember." Silence is not the default; skipping the check silently is the failure mode this exists to prevent.
+
+When the checkpoint finds a match: if you're in an interactive turn where the user will read the very next message (the common case), **offer, don't auto-write** — a short one-line offer like "Worth a gotcha entry — that env var default was the actual culprit. Log it?" — and wait for their reply before writing.
+
+If you're running unattended (a background/async task, an autonomous multi-step run with no human reading each message), don't block on a reply that may never come — **write the entry directly**, then say what you logged in one line (e.g. "Logged a gotcha: ..."). The user can always delete or edit it later; a stuck task waiting on a confirmation nobody will see is worse than an entry that turns out unwanted.
+
+Don't fire on routine work — only on moments that would genuinely be useful to reread later. If in doubt after running the checkpoint, lean toward not interrupting; better to miss one than to nag. The checkpoint must still run — "don't nag" governs whether to *offer* after checking, not whether to check.
 
 ## Trigger 2: Manual
 
