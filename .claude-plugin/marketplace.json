@@ -1,6 +1,8 @@
 {
   "name": "project-distiller",
-  "owner": "RunLit",
+  "owner": {
+    "name": "RunLit"
+  },
   "plugins": [
     {
       "name": "project-distiller",
