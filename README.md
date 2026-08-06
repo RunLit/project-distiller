@@ -24,9 +24,10 @@ A cross-project index gets updated alongside every entry, so you have one place 
 
 ## Install
 
+```bash
 claude plugin marketplace add RunLit/project-distiller
 claude plugin install project-distiller@project-distiller
-
+```
 
 On first enable, you'll be asked where to save your notes (defaults to `~/project-distill`).
 
