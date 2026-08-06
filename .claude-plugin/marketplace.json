@@ -1,0 +1,11 @@
+{
+  "name": "project-distiller",
+  "owner": "RunLit",
+  "plugins": [
+    {
+      "name": "project-distiller",
+      "source": "./project-distiller",
+      "description": "Distill project work into short, human-first notes — Knowledge, Gotchas, and Sparks."
+    }
+  ]
+}

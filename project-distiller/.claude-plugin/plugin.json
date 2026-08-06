@@ -1,0 +1,17 @@
+{
+  "name": "project-distiller",
+  "version": "1.0.0",
+  "description": "Distill project work into short, human-first notes — Knowledge, Gotchas, and Sparks.",
+  "author": {
+    "name": "RunLit"
+  },
+  "userConfig": {
+    "distill_root": {
+      "type": "directory",
+      "title": "Distill notes folder",
+      "description": "Where should Project Distill save your notes?",
+      "required": true,
+      "default": "~/project-distill"
+    }
+  }
+}
